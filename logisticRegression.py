@@ -14,7 +14,7 @@ from sklearn.preprocessing import PolynomialFeatures
 def logisticRegression(X_train, X_test, y_train, method = 1, degree = 3, n_iter_search = 1000):
 	
 	if degree > 1:
-		poly = PolynomialFeatures(degree=3)
+		poly = PolynomialFeatures(degree)
 		X_train = poly.fit_transform(X_train)
 		X_test = poly.fit_transform(X_test)
 		

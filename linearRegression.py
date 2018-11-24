@@ -17,7 +17,7 @@ def linearRegression(X_train, X_test, y_train, method = 1, degree = 1, n_iter_se
 
 	
 	if degree > 1:
-		poly = PolynomialFeatures(degree=3)
+		poly = PolynomialFeatures(degree)
 		X_train = poly.fit_transform(X_train)
 		X_test = poly.fit_transform(X_test)
 	

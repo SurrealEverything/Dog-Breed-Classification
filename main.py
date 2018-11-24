@@ -19,11 +19,13 @@ from analyseData import analyseData
 from plotDecisionBoundry import plotDecisionBoundry
 from evaluateRegression import evaluateRegression
 
+#loading pre-processed data
 X_train, X_test, yClass_train, yClass_test, yReg_train, yReg_test = processData()
 
 yClass_lr = logisticRegression(X_train, X_test, yClass_train)
 lrAc = accuracy_score(yClass_test, yClass_lr)
 
+#reloading data pre-processed with different parameters 
 X_train, X_test, yClass_train, yClass_test, yReg_train, yReg_test = processData(normalization = 'mms')
 
 yClass_rf = randomForest(X_train, X_test, yClass_train)

@@ -14,7 +14,7 @@ from sklearn.preprocessing import PolynomialFeatures
 def kNNRegression(X_train, X_test, y_train, method = 0, degree = 1, n_iter_search = 100):
 	
 	if degree > 1:
-		poly = PolynomialFeatures(degree=3)
+		poly = PolynomialFeatures(degree)
 		X_train = poly.fit_transform(X_train)
 		X_test = poly.fit_transform(X_test)
 	
