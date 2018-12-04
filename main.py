@@ -53,7 +53,7 @@ evaluateClassification(yClass_test, yClass_knn, 'K-nearest neighbors', displayDe
 plotDecisionBoundry(X_test, yClass_test, yClass_knn, 'K-nearest neighbors')
 
 evaluateRegression(yReg_test, yReg_lr, 'Linear Regression')
-evaluateRegression(yReg_test, yReg_lr, 'KNN Regression')
+evaluateRegression(yReg_test, yReg_nr, 'KNN Regression')
 
 print('\nFINAL VERDICT:')
 print('\nAccuracy(lr, rf, knn): ', lrAc, rfAc, knnAc)
